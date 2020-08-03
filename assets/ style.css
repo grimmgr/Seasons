@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Permanent+Marker&family=Rubik:wght@300;400&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+html {
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    overflow: scroll;
+    /* position: relative; */
+    height: 100vh;
+}
+
+/* html::after {
+    background-color: rgba(255, 255, 255, 0.5);
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+} */
+
+body {
+    /* background-color: rgb(78, 78, 78); */
+    height: 100%;
+    overflow: scroll;
+    /* position: relative; */
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+}
+
+header {
+    background-color: rgb(253, 86, 56);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 38px;
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 77px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+main {
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    height: 100%;
+    overflow: scroll;
+    padding-top: 77px;
+}
+
+.background::after {
+    background-color: rgba(255, 255, 255, 0.4);
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    /* overflow: scroll; */
+}
+
+input {
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+p {
+    text-align: left;
+}
+
+.search {
+    grid-area: srch;
+    margin: 0 auto;
+    padding-top: 5%;
+    width: 200px;
+}
+
+.list-container {
+    display: none;
+}
+
+ul {
+    color: rgb(255, 255, 255);
+    width: 150px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px auto;
+    width: 150px;
+    
+}
+
+.day {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(78, 78, 78);
+    grid-area: day;
+    margin: 0 auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    padding: 20px;
+    width: 200px;
+}
+
+h2 {
+    
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+}
+
+h4 {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+#description {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.day-info {
+    margin: 0 auto;
+    padding-right: 10px;
+    width: max-content;
+}
+
+#uv {
+    padding: 2px 5px;
+}
+
+.forecast {
+    color: rgb(255, 255, 255);
+    grid-area: fcst;
+    margin: 0 auto;
+    padding: 20px;
+    /* width: 300px; */
+}
+
+h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+}
+
+.forecast-grid {
+    margin: 20px auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 200px;
+}
+
+.card {
+    background-color: rgba(255, 38, 0, 0.4);
+    
+    border: 2px solid rgb(255, 255, 255);
+    display: inline-block;
+    padding: 10px;
+    width: 200px;
+}
+
+.forecast-info {
+    margin: 0 auto;
+    width: max-content;
+}
+
+@media screen and (min-width: 500px) {
+    .day {
+        width: 250px;
+    }
+    .forecast-grid {
+        width: 250px;
+    }
+    .card {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .list-container {
+        display: block;
+        padding-top: 10px;
+    }
+
+    .forecast-grid {
+        width: 507px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+                'srch day day day'
+                'srch day day day'
+                'fcst fcst fcst fcst';
+    }
+
+    .search {
+        background-color: rgba(0, 0, 0, 0.2);
+        margin: 0;
+        height: min-content;
+        padding-left: 15px;
+        padding-bottom: 10px;
+    }
+
+    #search-form {
+        text-align: left;
+    }
+
+    input {
+        width: 150px;
+    }
+
+    .day {
+        margin-top: 17%;
+        margin-bottom: 10%;
+        width: 350px
+    }
+
+    #day-info {
+        font-size: 20px;
+    }
+}
