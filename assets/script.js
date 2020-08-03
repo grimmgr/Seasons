@@ -148,6 +148,11 @@ $(document).ready(function() {
         storeSearchList();
         $(this).parent().remove();
     });
+
+    $('#search-history').on('click', 'li', function() {
+        let liCity = $(this).text();
+        displayWeatherInfo(liCity);
+    });
     
 
 });

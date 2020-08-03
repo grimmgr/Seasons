@@ -41,6 +41,7 @@ button {
     background: transparent;
     border: none;
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 header {
@@ -115,6 +116,7 @@ ul {
 }
 
 li {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     margin: 5px auto;
@@ -184,7 +186,6 @@ h3 {
 
 .card {
     background-color: rgba(255, 38, 0, 0.4);
-    
     border: 2px solid rgb(255, 255, 255);
     display: inline-block;
     padding: 10px;
