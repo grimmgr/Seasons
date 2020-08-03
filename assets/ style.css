@@ -2,7 +2,7 @@
 
 * {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5em;
     margin: 0;
     padding: 0;
@@ -12,29 +12,13 @@
 }
 
 html {
-    /* background-repeat: no-repeat;
-    background-size: cover; */
     overflow: scroll;
-    /* position: relative; */
     height: 100vh;
 }
 
-/* html::after {
-    background-color: rgba(255, 255, 255, 0.5);
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    z-index: -1;
-} */
-
 body {
-    /* background-color: rgb(78, 78, 78); */
     height: 100%;
     overflow: scroll;
-    /* position: relative; */
 }
 
 button {
@@ -72,8 +56,6 @@ h1 {
 }
 
 main {
-    /* background-repeat: no-repeat;
-    background-size: cover; */
     height: 100%;
     overflow: scroll;
     padding-top: 77px;
@@ -87,12 +69,12 @@ main {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    /* overflow: scroll; */
 }
 
 input {
     background: transparent;
     border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 p {
@@ -102,6 +84,7 @@ p {
 .search {
     grid-area: srch;
     margin: 0 auto;
+    margin-bottom: 7%;
     padding-top: 5%;
     width: 200px;
 }
@@ -125,19 +108,23 @@ li {
 }
 
 .day {
+    align-items: center;
+    display: flex;
+    grid-area: day;
+    justify-content: center;
+    padding: 3%;
+}
+
+.day-container {
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid rgb(255, 255, 255);
     color: rgb(78, 78, 78);
-    grid-area: day;
-    margin: 0 auto;
-    margin-top: 7%;
-    margin-bottom: 7%;
+    height: min-content;
     padding: 20px;
     width: 200px;
 }
 
 h2 {
-    
     font-family: 'Rubik', sans-serif;
     font-size: 30px;
 }
@@ -167,8 +154,7 @@ h4 {
     color: rgb(255, 255, 255);
     grid-area: fcst;
     margin: 0 auto;
-    padding: 20px;
-    /* width: 300px; */
+    margin-top: 20px;
 }
 
 h3 {
@@ -198,7 +184,7 @@ h3 {
 }
 
 @media screen and (min-width: 500px) {
-    .day {
+    .day-container {
         width: 250px;
     }
     .forecast-grid {
@@ -210,9 +196,16 @@ h3 {
 }
 
 @media screen and (min-width: 700px) {
+    * {
+        font-size: 16px;
+    }
     .list-container {
         display: block;
         padding-top: 10px;
+    }
+
+    .forecast {
+        margin-top: 0;
     }
 
     .forecast-grid {
@@ -226,6 +219,7 @@ h3 {
                 'srch day day day'
                 'srch day day day'
                 'fcst fcst fcst fcst';
+        height: 100%;
     }
 
     .search {
@@ -244,13 +238,21 @@ h3 {
         width: 150px;
     }
 
-    .day {
-        margin-top: 17%;
-        margin-bottom: 10%;
+    .day-container {
         width: 350px
     }
 
     #day-info {
         font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .forecast-grid {
+        width: 759px;
+    }
+
+    .search {
+        margin: 5% auto;
     }
 }
