@@ -46,8 +46,8 @@ $(document).ready(function() {
                     }
                 }
                 if (response.weather[0].main === 'Clear') {
-                    $('.background').css('background-image', 'url(https://royalfashionist-wpengine.netdna-ssl.com/wp-content/uploads/2017/07/justin-bieber-beach.jpg)');
-                    $('.background').css('background-position', '100% 0%');
+                    $('.background').css('background-image', 'url(https://ca-times.brightspotcdn.com/dims4/default/1b100d3/2147483647/strip/true/crop/1600x900+0+0/resize/840x473!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F40%2F83%2F11cf9acc7814ae7325f0f995afad%2Fla-et-mg-justin-bieber-butt-picture-instagram-001)');
+                    $('.background').css('background-position', '70% 50%');
                 }
                 if (response.weather[0].main === 'Tornado' || response.weather[0].main === 'Smoke' || response.weather[0].main === 'Ash') {
                     $('.background').css('background-image', 'url(https://www.somagnews.com/wp-content/uploads/2020/01/e2-e1578172228338.jpg)');
